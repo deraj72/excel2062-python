@@ -7,8 +7,8 @@ def import_data(wb_name):
     #Open excel table, read in each specific value to the data dictionary, each item becomes a list of 12 values, one for each column
     wb=load_workbook(wb_name)
     ws=wb.active
-    items=[['a','b','c','d','e','f','A','B','C','D','E','F'] for i in range(100)]
-    data={'from':'0','to':'1','hand_receipt_number':'2','end_item_stock_number':'3','end_item_description':'4','publication_number':'5','publication_date':'6','quantity':'7','items':items}
+    #items=[['a','b','c','d','e','f','A','B','C','D','E','F'] for i in range(100)]
+    #data={'from':'0','to':'1','hand_receipt_number':'2','end_item_stock_number':'3','end_item_description':'4','publication_number':'5','publication_date':'6','quantity':'7','items':items}
     max_row = ws.max_row
     print(("Copying {} items from property.xlsx to da2062_out.docx").format(max_row))
     data['from']=str(ws.cell(1,2).value)
